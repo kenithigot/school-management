@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
     <div class="relative isolate px-6 pt-14 lg:px-8">
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
             <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#333132] to-[#3ab61b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -39,50 +40,47 @@
                     </div>
                 </div>
             </div>
+            <div id="p" class="block"></div>
         </div>
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
             aria-hidden="true">
             <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#333132] to-[#3ab61b] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-            </div>
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">            
+            </div>           
         </div>
+        
     </div>
     <div class="relative">
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:pt-14 pb-4 lg:pb-8 mx-auto">
             <!-- Title -->
-            <div class=" text-center mb-6">
-                <h2 class="text-xl font-semibold md:text-3xl md:leading-tight text-gray-800">Empowering Education Through
-                    Meaningful Partnerships</h2>
+            <div class="text-center mb-6">
+                <h2 class="text-xl font-semibold md:text-3xl md:leading-tight text-gray-800">
+                    Empowering Education Through Meaningful Partnerships
+                </h2>
             </div>
             <!-- End Title -->
 
             <!-- Grid -->
             <div
                 class="my-8 md:my-16 grid grid-cols-3 sm:grid-cols-3 lg:flex sm:justify-evenly gap-6 sm:gap-x-8 lg:gap-x-16">
-                <!-- Partnership Logo -->
+                <!-- Repeat this logo block -->
                 <div class="shrink-0 transition hover:-translate-y-1 cursor-pointer flex justify-center">
-                    <img src="{{ asset('images/logo1.png') }}" class="object-cover h-28 w-28 mx-auto sm:mx-0"
-                        alt="School 1">
+                    <img src="{{ asset('images/logo1.png') }}" class="object-cover h-28 w-28" alt="School 1">
                 </div>
                 <div class="shrink-0 transition hover:-translate-y-1 cursor-pointer flex justify-center">
-                    <img src="{{ asset('images/logo2.png') }}" class="object-cover h-28 w-28  mx-auto sm:mx-0"
-                        alt="School 2">
+                    <img src="{{ asset('images/logo2.png') }}" class="object-cover h-28 w-28" alt="School 2">
                 </div>
                 <div class="shrink-0 transition hover:-translate-y-1 cursor-pointer flex justify-center">
-                    <img src="{{ asset('images/logo3.png') }}" class="object-cover h-24 w-24  mx-auto sm:mx-0"
-                        alt="School 3">
+                    <img src="{{ asset('images/logo3.png') }}" class="object-cover h-24 w-24" alt="School 3">
                 </div>
                 <div class="shrink-0 transition hover:-translate-y-1 cursor-pointer flex justify-center">
-                    <img src="{{ asset('images/logo4.png') }}" class="object-cover h-28 w-28  mx-auto sm:mx-0"
-                        alt="School 4">
+                    <img src="{{ asset('images/logo4.png') }}" class="object-cover h-28 w-28" alt="School 4">
                 </div>
                 <div class="shrink-0 transition hover:-translate-y-1 cursor-pointer flex justify-center">
-                    <img src="{{ asset('images/logo5.png') }}" class="object-cover h-26 w-26  mx-auto sm:mx-0"
-                        alt="School 5">
+                    <img src="{{ asset('images/logo5.png') }}" class="object-cover h-26 w-26" alt="School 4">
                 </div>
                 <div class="shrink-0 transition hover:-translate-y-1 cursor-pointer flex justify-center">
-                    <img src="{{ asset('images/logo6.png') }}" class="object-cover h-26 w-26  mx-auto sm:mx-0"
-                        alt="School 6">
+                    <img src="{{ asset('images/logo6.png') }}" class="object-cover h-26 w-26" alt="School 4">
                 </div>
             </div>
             <!-- End Grid -->
@@ -637,6 +635,7 @@
                 <!-- End Grid -->
 
                 <!-- SVG Element -->
+
                 <div class="absolute bottom-0 end-0 transform lg:translate-x-32" aria-hidden="true">
                     <svg class="w-40 h-auto sm:w-72" width="1115" height="636" viewBox="0 0 32 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -670,12 +669,15 @@
                         </g>
                     </svg>
                 </div>
+                <div id="c" class="relative">
+                </div>
                 <!-- End SVG Element -->
             </div>
         </div>
         <!-- End Testimonials -->
 
         <!-- Features -->
+
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="pb-10">
                 <h2
@@ -684,10 +686,10 @@
                 </h2>
             </div>
             <!-- Tab Nav -->
-            <nav class="mx-auto flex flex-col sm:flex-row gap-y-px sm:gap-y-0 bg-slate-200 rounded-xl" aria-label="Tabs"
+            <nav class="mx-auto flex flex-col sm:flex-row gap-y-px sm:gap-y-0 bg-slate-200" aria-label="Tabs"
                 role="tablist" aria-orientation="horizontal">
                 <button type="button"
-                    class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 p-3 md:p-5 active rounded-l-xl"
+                    class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 p-3 md:p-5 active"
                     id="tabs-with-card-item-1" aria-selected="true" data-hs-tab="#tabs-with-card-1"
                     aria-controls="tabs-with-card-1" role="tab">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -697,7 +699,8 @@
                     </svg>
 
                     <span class="sm:mt-5">
-                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800">Business &
+                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800 text-center">Business
+                            &
                             Management</span>
                     </span>
                 </button>
@@ -738,7 +741,8 @@
                             </g>
                         </g>
                     </svg> <span class="sm:mt-5">
-                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800">Social Science</span>
+                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800 text-center">Social
+                            Science</span>
                     </span>
                 </button>
 
@@ -773,7 +777,8 @@
                         </g>
                     </svg>
                     <span class="sm:mt-5">
-                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800">Technology &
+                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800 text-center">Technology
+                            &
                             Engineering</span>
                     </span>
                 </button>
@@ -789,12 +794,13 @@
                     </svg>
 
                     <span class="sm:mt-5">
-                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800">Education</span>
+                        <span
+                            class="hs-tab-active:text-green-500 block font-semibold text-gray-800 text-center">Education</span>
                     </span>
                 </button>
 
                 <button type="button"
-                    class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 p-3 md:p-5 rounded-r-xl"
+                    class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col text-start hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 p-3 md:p-5"
                     id="tabs-with-card-item-5" aria-selected="false" data-hs-tab="#tabs-with-card-5"
                     aria-controls="tabs-with-card-5" role="tab">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -804,7 +810,8 @@
                     </svg>
 
                     <span class="sm:mt-5">
-                        <span class="hs-tab-active:text-green-500 block font-semibold text-gray-800">Criminology</span>
+                        <span
+                            class="hs-tab-active:text-green-500 block font-semibold text-gray-800 text-center">Criminology</span>
                     </span>
                 </button>
             </nav>
@@ -818,31 +825,77 @@
                         <!-- Mobile Device -->
                         <figure class="hidden absolute bottom-0 start-0 z-2 max-w-full w-60 h-auto mb-20 ms-20 lg:block">
                             <div
-                                class="p-1.5 bg-gray-100 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)]">
-                                <img class="max-w-full rounded-[1.25rem] h-auto" src="../assets/img/mockups/img9.jpg"
-                                    alt="Features Image">#4CAF50
+                                class="p-[2px] bg-green-500 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)]">
+                                <img class="max-w-full rounded-[1.25rem] h-auto" src="{{ asset('images/program1.jpg') }}"
+                                    alt="Features Image">
                             </div>
                         </figure>
                         <!-- End Mobile Device -->
 
                         <!-- Browser Device -->
                         <figure
-                            class="ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-b-lg">
-                            <div
-                                class="relative flex items-center max-w-3xl bg-white border-b border-gray-100 rounded-t-lg py-2 px-24">
-                                <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                </div>
-                                <div
-                                    class="flex justify-center items-center size-full bg-gray-200 text-[.25rem] text-gray-800 rounded-sm sm:text-[.5rem]">
-                                    www.preline.co</div>
-                            </div>
+                            class="bg-green-500 p-[2px] ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-lg">
 
-                            <div class="bg-gray-800 rounded-b-lg">
-                                <img class="max-w-full h-auto rounded-b-lg" src="../assets/img/mockups/img8.jpg"
-                                    alt="Features Image">
+                            <div class="bg-gray-100 rounded-lg">
+                                <div class="max-w-full sm:h-92 rounded-b-lg px-4 py-6 sm:py-16 sm:px-12">
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Business Administration (BBA)
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Science in Accountancy (BSA)
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Entrepreneurship
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master of Business Administration (MBA)
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master in Human Resource Management
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </figure>
                         <!-- End Browser Device -->
@@ -856,8 +909,8 @@
                         <!-- Mobile Device -->
                         <figure class="hidden absolute bottom-0 start-0 z-2 max-w-full w-60 h-auto mb-20 ms-20 lg:block">
                             <div
-                                class="p-1.5 bg-gray-700 shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)] rounded-3xl">
-                                <img class="max-w-full rounded-[1.25rem] h-auto" src="../assets/img/mockups/img11.jpg"
+                                class="p-[2px] bg-green-500 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)]">
+                                <img class="max-w-full rounded-[1.25rem] h-auto" src="{{ asset('images/program2.jpg') }}"
                                     alt="Features Image">
                             </div>
                         </figure>
@@ -865,22 +918,68 @@
 
                         <!-- Browser Device -->
                         <figure
-                            class="ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-shadow-[0_2.75rem_3.5rem_-2rem_rgb(0_0_0_/_20%),_0_0_5rem_-2rem_rgb(0_0_0_/_15%)] rounded-b-lg">
-                            <div
-                                class="relative flex items-center max-w-3xl bg-gray-800 border-b border-gray-700 rounded-t-lg py-2 px-24">
-                                <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
-                                    <span class="size-2 bg-gray-700 rounded-full"></span>
-                                    <span class="size-2 bg-gray-700 rounded-full"></span>
-                                    <span class="size-2 bg-gray-700 rounded-full"></span>
-                                </div>
-                                <div
-                                    class="flex justify-center items-center size-full bg-gray-700 text-[.25rem] sm:text-[.5rem] text-gray-200 rounded-sm">
-                                    www.preline.co</div>
-                            </div>
+                            class="bg-green-500 p-[2px] ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-lg">
 
-                            <div class="bg-gray-800 rounded-b-lg">
-                                <img class="max-w-full h-auto rounded-b-lg" src="../assets/img/mockups/img10.jpg"
-                                    alt="Features Image">
+                            <div class="bg-gray-100 rounded-lg">
+                                <div class="max-w-full sm:h-92 rounded-b-lg px-4 py-6 sm:py-16 sm:px-12">
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Arts in Psychology
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Arts in Sociology
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Political Science
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master of Psychology – Clinical & Counseling
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master of Public Administration
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </figure>
                         <!-- End Browser Device -->
@@ -894,8 +993,8 @@
                         <!-- Mobile Device -->
                         <figure class="hidden absolute bottom-0 start-0 z-2 max-w-full w-60 h-auto mb-20 ms-20 lg:block">
                             <div
-                                class="p-1.5 bg-gray-100 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)">
-                                <img class="max-w-full rounded-[1.25rem] h-auto" src="../assets/img/mockups/img13.jpg"
+                                class="p-[2px] bg-green-500 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)]">
+                                <img class="max-w-full rounded-[1.25rem] h-auto" src="{{ asset('images/program3.jpg') }}"
                                     alt="Features Image">
                             </div>
                         </figure>
@@ -903,22 +1002,68 @@
 
                         <!-- Browser Device -->
                         <figure
-                            class="ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-b-lg">
-                            <div
-                                class="relative flex items-center max-w-3xl bg-white border-b border-gray-100 rounded-t-lg py-2 px-24">
-                                <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                </div>
-                                <div
-                                    class="flex justify-center items-center size-full bg-gray-200 text-[.25rem] text-gray-800 rounded-sm sm:text-[.5rem]">
-                                    www.preline.co</div>
-                            </div>
+                            class="bg-green-500 p-[2px] ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-lg">
 
-                            <div class="bg-gray-800 rounded-b-lg">
-                                <img class="max-w-full h-auto rounded-b-lg" src="../assets/img/mockups/img12.jpg"
-                                    alt="Features Image">
+                            <div class="bg-gray-100 rounded-lg">
+                                <div class="max-w-full sm:h-92 rounded-b-lg px-4 py-6 sm:py-16 sm:px-12">
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Science in Computer Science (BSCS)
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Science in Information Technology
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Science in Computer Engineering (BSCpE)
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Science in Electronics & Communications Engineering
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master in Data Science
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </figure>
                         <!-- End Browser Device -->
@@ -932,8 +1077,8 @@
                         <!-- Mobile Device -->
                         <figure class="hidden absolute bottom-0 start-0 z-2 max-w-full w-60 h-auto mb-20 ms-20 lg:block">
                             <div
-                                class="p-1.5 bg-gray-100 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)">
-                                <img class="max-w-full rounded-[1.25rem] h-auto" src="../assets/img/mockups/img13.jpg"
+                                class="p-[2px] bg-green-500 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)]">
+                                <img class="max-w-full rounded-[1.25rem] h-auto" src="{{ asset('images/program4.jpg') }}"
                                     alt="Features Image">
                             </div>
                         </figure>
@@ -941,22 +1086,57 @@
 
                         <!-- Browser Device -->
                         <figure
-                            class="ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-b-lg">
-                            <div
-                                class="relative flex items-center max-w-3xl bg-white border-b border-gray-100 rounded-t-lg py-2 px-24">
-                                <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                </div>
-                                <div
-                                    class="flex justify-center items-center size-full bg-gray-200 text-[.25rem] text-gray-800 rounded-sm sm:text-[.5rem]">
-                                    www.preline.co</div>
-                            </div>
+                            class="bg-green-500 p-[2px] ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-lg">
 
-                            <div class="bg-gray-800 rounded-b-lg">
-                                <img class="max-w-full h-auto rounded-b-lg" src="../assets/img/mockups/img12.jpg"
-                                    alt="Features Image">
+                            <div class="bg-gray-100 rounded-lg">
+                                <div class="max-w-full sm:h-92 rounded-b-lg px-4 py-6 sm:py-16 sm:px-12">
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Elementary Education
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Secondary Education
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master of Arts in Education
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Teacher Certification Program (TCP)
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </figure>
                         <!-- End Browser Device -->
@@ -970,8 +1150,8 @@
                         <!-- Mobile Device -->
                         <figure class="hidden absolute bottom-0 start-0 z-2 max-w-full w-60 h-auto mb-20 ms-20 lg:block">
                             <div
-                                class="p-1.5 bg-gray-100 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)">
-                                <img class="max-w-full rounded-[1.25rem] h-auto" src="../assets/img/mockups/img13.jpg"
+                                class="p-[2px] bg-green-500 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)]">
+                                <img class="max-w-full rounded-[1.25rem] h-auto" src="{{ asset('images/program5.jpg') }}"
                                     alt="Features Image">
                             </div>
                         </figure>
@@ -979,32 +1159,506 @@
 
                         <!-- Browser Device -->
                         <figure
-                            class="ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-b-lg">
-                            <div
-                                class="relative flex items-center max-w-3xl bg-white border-b border-gray-100 rounded-t-lg py-2 px-24">
-                                <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                    <span class="size-2 bg-gray-200 rounded-full"></span>
-                                </div>
-                                <div
-                                    class="flex justify-center items-center size-full bg-gray-200 text-[.25rem] text-gray-800 rounded-sm sm:text-[.5rem]">
-                                    www.preline.co</div>
-                            </div>
+                            class="bg-green-500 p-[2px] ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] rounded-lg">
 
-                            <div class="bg-gray-800 rounded-b-lg">
-                                <img class="max-w-full h-auto rounded-b-lg" src="../assets/img/mockups/img12.jpg"
-                                    alt="Features Image">
+                            <div class="bg-gray-100 rounded-lg">
+                                <div class="max-w-full sm:h-92 rounded-b-lg px-4 py-6 sm:py-16 sm:px-12">
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Laws (LLB or JD equivalent)
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Bachelor of Science in Criminology
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Master in Criminal Justice
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="shrink-0 size-6 mt-0.5 text-green-600"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            <span class="text-gray-800 font-semibold sm:text-2xl">
+                                                Certificate in Legal Studies
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </figure>
                         <!-- End Browser Device -->
                     </div>
                     <!-- End Devices -->
-                </div>
+                </div><div id="b" class="block"></div>
             </div>
             <!-- End Tab Content -->
         </div>
+
         <!-- End Features -->
+    </div>
+    <div class="bg-white">
+        <!-- Features -->
+        <div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <div class="pb-6">
+                <h2
+                    class="text-2xl font-bold md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight text-green-500">
+                    Experience Our Story
+                </h2>
+                <p class="mt-5 text-gray-600 text-justify sm:text-left">
+                    Behind every number is a story — a student who discovered their potential, a teacher who went the extra
+                    mile, and a community that believed in the power of education. These achievements are not just ours;
+                    they belong to every partner who dared to dream with us.
+                </p>
+            </div>
+            <div class="min-h-[35vh] md:min-h-[75vh] bg-center bg-cover bg-no-repeat relative rounded-xl"
+                style="background-image: url('{{ asset('images/school1.jpg') }}');">
+                <div
+                    class="absolute bottom-0 start-0 end-0 max-w-xs text-center mx-auto p-6 md:start-auto md:text-start md:mx-0">
+                    <!-- Card -->
+                    <div class="px-5 py-4 inline-block bg-white rounded-lg md:p-7">
+                        <div class="hidden md:block">
+                            <h3 class="text-lg font-bold text-gray-800 sm:text-2xl">How <span
+                                    class="font-bold uppercase text-green-600">Kenncoi</span>
+                                University Creates Impact</h3>
+                            <p class="mt-2 text-gray-800">Discover how the University is redefining education.</p>
+                        </div>
+
+                        <div class="md:mt-16">
+                            <a class="flex items-center gap-2 text-sm font-medium text-gray-800 hover:text-green-500 focus:outline-hidden focus:text-green-500"
+                                href="#">
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                                Watch our story
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+            </div>
+        </div>
+        <!-- End Features -->
+
+        <!-- Card Blog -->
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-12 mx-auto">
+
+            <!-- Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card -->
+                <a class="group relative flex flex-col w-full min-h-60 bg-center bg-cover rounded-xl hover:shadow-lg focus:outline-hidden focus:shadow-lg transition"
+                    style="background-image:url('{{ asset('images/blog1.jpg') }}')" href="#">
+                    <div class="flex-auto p-4 md:p-6">
+                        <h3 class="text-xl text-white/90 group-hover:text-white"><span class="font-bold">Library & Media
+                                Center</span>
+                            A hub of knowledge and digital resources.</h3>
+                    </div>
+                    <div class="pt-0 p-4 md:p-6">
+                        <div
+                            class="inline-flex items-center gap-2 text-sm font-medium text-white group-hover:text-white group-focus:text-white">
+                            Read more
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <!-- End Card -->
+
+                <!-- Card -->
+                <a class="group flex flex-col focus:outline-hidden" href="#">
+                    <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
+                        <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+                            src="{{ asset('images/blog2.jpg') }}" alt="Blog Image">
+                    </div>
+
+                    <div class="mt-7">
+                        <h3 class="text-xl font-semibold text-green-500 group-hover:text-green-600 ">
+                            Science & Computer Labs
+                        </h3>
+                        <p class="mt-3 text-gray-800">
+                            Hands-on, tech-enhanced learning spaces.
+                        </p>
+                        <p
+                            class="mt-5 inline-flex items-center gap-x-1 text-sm text-green-500 decoration-2 group-hover:underline group-focus:underline font-medium">
+                            Read more
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <!-- End Card -->
+
+                <!-- Card -->
+                <a class="group flex flex-col focus:outline-hidden" href="#">
+                    <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
+                        <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+                            src="{{ asset('images/blog3.jpg') }}" alt="Blog Image">
+                    </div>
+
+                    <div class="mt-7">
+                        <h3 class="text-xl font-semibold text-green-500 group-hover:text-green-600 ">
+                            E-Learning Suites
+                        </h3>
+                        <p class="mt-3 text-gray-800">
+                            Equipped for digital and blended learning.
+                        </p>
+                        <p
+                            class="mt-5 inline-flex items-center gap-x-1 text-sm text-green-500 decoration-2 group-hover:underline group-focus:underline font-medium">
+                            Read more
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <!-- End Card -->
+            </div>
+            <!-- End Grid -->
+        </div>
+        <!-- End Card Blog -->
+
+        <!-- FAQ -->
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <!-- Grid -->
+            <div class="grid md:grid-cols-5 gap-10">
+                <div class="md:col-span-2">
+                    <div class="max-w-lg sm:pr-12">
+                        <h2 class="text-2xl font-bold md:text-5xl md:leading-tight text-gray-800">Steps to enroll<br> at
+                            <span class="font-bold uppercase text-green-600">Kenncoi</span>
+                        </h2>
+                        <p class="mt-1 hidden md:block text-gray-600">Joining the University is simple and seamless. Follow
+                            these steps to begin your educational journey with us:</p>
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="md:col-span-3">
+                    <!-- Accordion -->
+                    <div class="hs-accordion-group divide-y divide-gray-200">
+                        <div class="hs-accordion pb-3 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                            <button
+                                class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-green-500 rounded-lg transition hover:text-green-600 focus:outline-hidden focus:text-green-600 "
+                                aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                                1. Submit Your Application
+                                <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-green-500 group-hover:text-green-600"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </button>
+                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-one"
+                                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                                role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                                <p class="text-gray-600">
+                                    Complete the online or in-person application form with required documents.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                            <button
+                                class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-green-500 rounded-lg transition hover:text-green-600 focus:outline-hidden focus:text-green-600 "
+                                aria-expanded="false"
+                                aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                                2. Document Review
+                                <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </button>
+                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-two"
+                                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                                role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                                <p class="text-gray-600">
+                                    Our admissions team will review your application and academic records.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+                            <button
+                                class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-green-500 rounded-lg transition hover:text-green-600 focus:outline-hidden focus:text-green-600 "
+                                aria-expanded="false"
+                                aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+                                3. Interview & Assessment
+                                <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </button>
+                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-three"
+                                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                                role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
+                                <p class="text-gray-600">
+                                    Attend a short interview and/or entrance exam depending on your grade level.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-four">
+                            <button
+                                class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-green-500 rounded-lg transition hover:text-green-600 focus:outline-hidden focus:text-green-600 "
+                                aria-expanded="false"
+                                aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+                                4. Receive Admission Offer
+                                <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </button>
+                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-four"
+                                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                                role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-four">
+                                <p class="text-gray-600">
+                                    If accepted, you’ll receive an official offer letter and enrollment package.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-five">
+                            <button
+                                class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-green-500 rounded-lg transition hover:text-green-600 focus:outline-hidden focus:text-green-600 "
+                                aria-expanded="false"
+                                aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+                                5. Confirm Enrollment
+                                <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </button>
+                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-five"
+                                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                                role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five">
+                                <p class="text-gray-600">
+                                    Secure your spot by completing the enrollment form and paying the initial fees.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-six">
+                            <button
+                                class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-green-500 rounded-lg transition hover:text-green-600 focus:outline-hidden focus:text-green-600 "
+                                aria-expanded="false"
+                                aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
+                                6. Start Your Journey
+                                <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </button>
+                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-six"
+                                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                                role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six">
+                                <p class="text-gray-600">
+                                    Attend orientation, meet your teachers, and begin your adventure with us!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion -->
+                </div>
+                <!-- End Col -->
+            </div><div id="con" class="block"></div>
+            <!-- End Grid -->
+        </div>
+        <!-- End FAQ -->
+
+        <!-- Contact -->
+        <div class="bg-slate-100">
+            <div class="max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 mx-auto ">
+                <div class="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
+                    <h2
+                        class="text-2xl font-bold md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight text-green-500">
+                        Contact
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12">
+                    <div class="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden bg-gray-100 rounded-2xl">
+                        <div class="p-2 bg-slate-200">
+                            <iframe class="rounded-lg"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11133.497760790018!2d4.782040255424198!3d45.763685656659675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb822ec733b7%3A0xa20d58c99e225084!2sChampvert%2C%2069005%20Lyon%2C%20France!5e0!3m2!1sen!2sph!4v1745303091152!5m2!1sen!2sph"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+
+                    <div class="space-y-8 lg:space-y-16">
+                        <div>
+                            <h3 class="mb-5 font-semibold text-green-500">
+                                Our address
+                            </h3>
+
+                            <!-- Grid -->
+                            <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                                <div class="flex gap-4">
+                                    <svg class="shrink-0 size-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+
+                                    <div class="grow">
+                                        <p class="text-sm text-gray-800">
+                                            Lyon, France
+                                        </p>
+                                        <address class="mt-1 text-gray-800 not-italic">
+                                            69005 Champvert Street, Fort de Vaise House<br>
+                                            Villa Montana St.
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Grid -->
+                        </div>
+
+                        <div>
+                            <h3 class="mb-5 font-semibold text-green-500">
+                                Our contacts
+                            </h3>
+
+                            <!-- Grid -->
+                            <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                                <div class="flex gap-4">
+                                    <svg class="shrink-0 size-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z">
+                                        </path>
+                                        <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"></path>
+                                    </svg>
+
+                                    <div class="grow">
+                                        <p class="text-sm text-gray-800">
+                                            Email us
+                                        </p>
+                                        <p>
+                                            <a class="relative inline-block font-medium text-gray-800 before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black"
+                                                href="mailto:example@site.so">
+                                                kenncoi.institution.ksu.edu.ph
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <svg class="shrink-0 size-5 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+
+                                    <div class="grow">
+                                        <p class="text-sm text-gray-600">
+                                            Call us
+                                        </p>
+                                        <p>
+                                            <a class="relative inline-block font-medium text-gray-800 before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black"
+                                                href="mailto:example@site.so">
+                                                +63 227-4658
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Grid -->
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+
     </div>
     <!-- End Approach -->
 @endsection

@@ -18,22 +18,22 @@
             </button>
         </div>
         <div class="hidden lg:flex items-center lg:gap-x-12 ">
-            <a href=""
+            <a href="{{ url('/')}}"
                 class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Home</a>
-            <a href="#"
+            <a href="#c"
                 class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Courses</a>
-            <a href="#"
-                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Services</a>
-            <a href="#"
+            <a href="#p"
+                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Partners</a>
+            <a href="#con"
                 class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Contact</a>
-            <a href="#"
+            <a href="#b"
                 class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Blog</a>
         </div>
         <div class="hidden lg:flex items-center lg:flex-1 lg:justify-end">
-            <div class="px-4">
+            {{-- <div class="px-4">
                 <a href="" class="text-base/6 font-semibold text-gray-900">Sign
                     up <span aria-hidden="true"></a>
-            </div>
+            </div> --}}
             <div class="px-4">
                 <a href=""
                     class= "gap-x-2 inline-flex items-center bg-green-500 hover:bg-green-400 focus:bg-green-400 py-2 px-4 rounded-md text-base/6 font-semibold text-white">
@@ -69,23 +69,23 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6 text-center">
-                        <a href=""
+                        <a href="{{ url('/')}}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-                        <a href="#"
+                        <a href="#c"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Courses</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Services</a>
-                        <a href="#"
+                        <a href="#p"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Partners</a>
+                        <a href="#con"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
-                        <a href="#"
+                        <a href="#b"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
                     </div>
                     <div class="h-[2px] w-full bg-green-500 rounded-lg"></div>
                     <div class="py-6 space-y-3">
-                        <a href="#"
+                        {{-- <a href="#"
                             class="inline-flex w-full justify-center text-center rounded-lg px-4 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Sign
                             Up
-                        </a>
+                        </a> --}}
                         <a href="#"
                             class="w-full gap-x-2 inline-flex items-center justify-center bg-green-500 hover:bg-green-400 focus:bg-green-400 py-2 rounded-lg px-4 text-base/7 font-semibold text-white ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
