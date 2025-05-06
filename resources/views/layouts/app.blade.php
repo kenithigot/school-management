@@ -11,46 +11,25 @@
 </head>
 
 <body class="bg-white">
+    @include('components.loader')
     @include('includes.navbar')
 
     <main>
         @yield('content')
-        @include('includes.sticky')
     </main>
+
     @include('includes.footer')
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = document.getElementById('closeMenu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-
-        const scrollToTopButton = 
-              document.getElementById('scroll-to-top');
-      
-        // Show button when user scrolls down
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 800) {
-                scrollToTopButton.classList.remove('hidden');
-            } else {
-                scrollToTopButton.classList.add('hidden');
-            }
-        });
-
-        // Smooth scroll to top
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }       
-    </script>
+    @include('includes.sticky')
 </body>
+<script>
+    // Smooth scroll to top
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
+</script>
+@vite('resources/js/animation.js')
 
 </html>

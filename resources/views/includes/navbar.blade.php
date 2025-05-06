@@ -18,16 +18,21 @@
             </button>
         </div>
         <div class="hidden lg:flex items-center lg:gap-x-12 ">
-            <a href="{{ url('/')}}"
-                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Home</a>
-            <a href="#c"
-                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Courses</a>
-            <a href="#p"
-                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Partners</a>
-            <a href="#con"
-                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Contact</a>
-            <a href="#b"
-                class="hover:bg-slate-100 hover:rounded-md px-1 text-base/6 font-semibold text-gray-900">Blog</a>
+            <x-nav-bar-link-lg href="{{ route('home') }}">
+                Home
+            </x-nav-bar-link-lg>
+            <x-nav-bar-link-lg href="#c">
+                Courses
+            </x-nav-bar-link-lg>
+            <x-nav-bar-link-lg href="#p">
+                Partners
+            </x-nav-bar-link-lg>
+            <x-nav-bar-link-lg href="#con">
+                Contact
+            </x-nav-bar-link-lg>
+            <x-nav-bar-link-lg href="#b">
+                Blog
+            </x-nav-bar-link-lg>
         </div>
         <div class="hidden lg:flex items-center lg:flex-1 lg:justify-end">
             {{-- <div class="px-4">
@@ -35,16 +40,30 @@
                     up <span aria-hidden="true"></a>
             </div> --}}
             <div class="px-4">
-                <a href=""
-                    class= "gap-x-2 inline-flex items-center bg-green-500 hover:bg-green-400 focus:bg-green-400 py-2 px-4 rounded-md text-base/6 font-semibold text-white">
+                <button onclick="delayedRedirect('{{ route('login') }}')"
+                    class= "gap-x-2 inline-flex items-center bg-green-500 hover:bg-green-400 focus:bg-green-400 py-2 px-4 rounded-md text-base/6 font-semibold text-white cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     </svg>
                     Log In
-                </a>
+                </button>
             </div>
+
+            <script>
+                function delayedRedirect(url) {
+                    // Blur content
+                    document.getElementById("mainContent").classList.add("blur-sm");
+                    // Show loader
+                    document.getElementById("pageLoader").classList.remove("hidden");
+
+                    // Redirect after 3 seconds
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 1500);
+                }
+            </script>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -69,16 +88,11 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6 text-center">
-                        <a href="{{ url('/')}}"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-                        <a href="#c"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Courses</a>
-                        <a href="#p"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Partners</a>
-                        <a href="#con"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
-                        <a href="#b"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
+                        <x-nav-bar-link href="{{ route('home') }}">Home</x-nav-bar-link>
+                        <x-nav-bar-link href="#c">Courses</x-nav-bar-link>
+                        <x-nav-bar-link href="#p">Partners</x-nav-bar-link>
+                        <x-nav-bar-link href="#con">Contact</x-nav-bar-link>
+                        <x-nav-bar-link href="#b">Blog</x-nav-bar-link>                   
                     </div>
                     <div class="h-[2px] w-full bg-green-500 rounded-lg"></div>
                     <div class="py-6 space-y-3">

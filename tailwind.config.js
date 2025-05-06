@@ -1,12 +1,15 @@
-module.exports = {
-    purge: [],
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-        extend: {},
-    },
-    variants: {
-        extend: {},
-    },
-    plugins: [],
-    
-};
+export default {
+  content: [
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue',
+    './node_modules/preline/dist/*.js',
+  ],
+  purge: false,
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/forms', 'tailwindcss-motion'),
+  ],
+}
