@@ -10,6 +10,7 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
+
         // Personal Information
         'first_name',
         'middle_name',
@@ -26,4 +27,14 @@ class Student extends Model
         'guardian_contact_number',
         'guardian_relationship',
     ];
+
+    public function getFullNameAttribute(): string
+    {
+        return collect([
+            $this->first_name,
+            $this->middle_name,
+            $this->last_name,
+        ])->filter()->join(' ');
+    }
+
 }

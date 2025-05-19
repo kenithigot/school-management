@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\View\View;
+use Illuminate\Support\Facades\DB;
 class StudentController extends Controller
 {
 
@@ -16,10 +17,6 @@ class StudentController extends Controller
         return view('admin.users.students.auth.register');
     }
 
-    public function view()
-    {
-        return view('admin.users.students.view');
-    }
 
     public function store(Request $request)
     {
@@ -70,7 +67,7 @@ class StudentController extends Controller
         if (!$userType) {
             return redirect()->back()->with('error', 'User type "student" not found!');
         }
-        
+
         // Create user account
         User::create([
             'username' => $validated['username'],
@@ -81,5 +78,13 @@ class StudentController extends Controller
 
         return redirect()->back()->with('success', 'Student account successfully registered!');
 
+    }
+
+    public function viewStudent()
+    {
+        // $students = DB::table('students')->get();
+        $students = Student::selectRaw('*, CONCAT(first_name, " ", middle_name, " ", last_name) AS full_name')->get();
+
+        return view('admin.users.students.auth.display', compact('students'));
     }
 }

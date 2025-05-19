@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="hs-accordion" id="students-accordion">
-                        <x-side-bar-button :isActive="request()->routeIs('view', 'register')">
+                        <x-side-bar-button :isActive="request()->routeIs('viewStudent', 'register')">
                             <x-svg.users-icon />
                             Students
                             <svg class="hs-accordion-active:hidden ms-auto block size-4"
@@ -46,7 +46,7 @@
                             role="students" aria-labelledby="students-accordion">
                             <ul class="pt-1 ps-7 space-y-1">
                                 <li>
-                                    <x-side-bar-link href="{{ route('view') }}">
+                                    <x-side-bar-link href="{{ route('viewStudent') }}">
                                         <x-svg.eye-icon />
                                         View Students
                                     </x-side-bar-link>
@@ -68,7 +68,7 @@
                     </li>
 
                     <li class="hs-accordion" id="teachers-accordion">
-                        <x-side-bar-button :isActive="request()->routeIs('view-teacher', 'teacher.register')">
+                        <x-side-bar-button :isActive="request()->routeIs('viewTeacher', 'teacher.register', 'viewTeacherDetails')">
                             <x-svg.users-icon />
                             Teachers
                             <svg class="hs-accordion-active:hidden ms-auto block size-4"
@@ -84,7 +84,7 @@
                             role="teachers" aria-labelledby="teachers-accordion">
                             <ul class="pt-1 ps-7 space-y-1">
                                 <li>
-                                    <x-side-bar-link><x-svg.eye-icon />View Teachers</x-side-bar-link>
+                                    <x-side-bar-link href="{{ route('viewTeacher')}}"><x-svg.eye-icon />View Teachers</x-side-bar-link>
                                 </li>
                                 <li>
                                     <x-side-bar-link href="{{ route('teacher.register') }}"><x-svg.add-user-icon />Add

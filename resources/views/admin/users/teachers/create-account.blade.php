@@ -43,7 +43,7 @@
             </x-content>
         </x-main-container>
     </x-partials.top-bar>
-
+<script src="{{asset('js/script.js')}}"></script>
 </body>
 
 </html>

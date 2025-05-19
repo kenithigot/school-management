@@ -222,31 +222,4 @@ document.addEventListener("DOMContentLoaded", () => {
     animatedSections.forEach((section) => observer.observe(section));
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleIcons = document.querySelectorAll('.password-toggle');
-
-    toggleIcons.forEach(function (icon) {
-        icon.addEventListener('click', function () {
-            const id = this.getAttribute('data-target');
-            togglePasswordVisibility(id);
-        });
-    });
-
-    function togglePasswordVisibility(id) {
-        var passwordField = document.getElementById(id);
-        var eyeIcon = document.getElementById('eye-icon-' + id);
-
-        if (!passwordField || !eyeIcon) return; // Safety check
-
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            eyeIcon.classList.remove('fa-eye');
-            eyeIcon.classList.add('fa-eye-slash');
-        } else {
-            passwordField.type = "password";
-            eyeIcon.classList.remove('fa-eye-slash');
-            eyeIcon.classList.add('fa-eye');
-        }
-    }
-});
 

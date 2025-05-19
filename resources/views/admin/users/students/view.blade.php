@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>View - Students  | School Management</title>
+    <title>View - Students | School Management</title>
+
+    <!-- Vite Laravel Assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
+
 
 <body>
     <div class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden">
@@ -15,6 +19,7 @@
         @include('components.partials.sidebar')
         {{-- End SideBar --}}
     </div>
+
     <x-partials.top-bar>
         <x-main-container>
             <ol class="flex items-center whitespace-nowrap p-3 border-b border-slate-200">
@@ -25,17 +30,18 @@
 
             <x-content>
                 <!-- Card Section -->
-                <div class="py-2 sm:py-6 lg:px-6 mx-auto"><!-- Card -->
-                    <div class="bg-white rounded-xl shadow-xs p-4 sm:p-7">
+                <div class="py-2 sm:py-6 lg:px-6 mx-auto">
+                    <!-- Card -->
+                    <div class="bg-slate-100 rounded-xl shadow-xs p-4 sm:p-7">
                         <div class="mb-8">
                             <h2 class="text-xl font-bold text-gray-800">
-                                Student Account
+                                View Account
                             </h2>
                             <p class="text-sm text-gray-600">
-                                Create a new student account and record essential academic and personal details.
+                                Provides detailed information about a student's profile, including academic records, attendance, personal details, and more.
                             </p>
                         </div>
-                        @yield('register-student')
+                        @yield('student-display')
                     </div>
                     <!-- End Card -->
                 </div>
@@ -43,6 +49,9 @@
             </x-content>
         </x-main-container>
     </x-partials.top-bar>
+
+   
+
 
 </body>
 

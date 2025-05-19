@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,12 @@
     <title>School Management</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+    ...
+
 </head>
 
 <body class="bg-white">
@@ -20,6 +26,7 @@
 
     @include('includes.footer')
     @include('includes.sticky')
+    @livewireScripts
 </body>
 <script>
     // Smooth scroll to top

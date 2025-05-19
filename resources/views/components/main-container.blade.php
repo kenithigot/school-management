@@ -1,3 +1,5 @@
 <div class="lg:ms-72">
- {{ $slot }}
+    {{ $slot }}
+
+
 </div>
