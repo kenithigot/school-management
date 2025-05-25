@@ -33,15 +33,27 @@
                         <!-- Card -->
                         <div class="bg-slate-100 rounded-xl shadow-xs p-4 sm:p-7">
                             <div class="mb-8">
-                                <a class="pb-4 inline-flex items-center gap-x-1 text-sm text-gray-800 hover:text-green-600 focus:outline-hidden focus:text-green-600"
-                                    href="{{ route('viewTeacher') }}">
-                                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="m15 18-6-6 6-6" />
-                                    </svg>
-                                    Back to home
-                                </a>
+                                <div class="flex items-center justify-between">
+                                    <a class="inline-flex items-center gap-x-1 text-sm text-gray-800 hover:text-green-600 focus:outline-hidden focus:text-green-600"
+                                        href="{{ route('viewTeacher') }}">
+                                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="m15 18-6-6 6-6" />
+                                        </svg>
+                                        Back to home
+                                    </a>
+
+                                    <a class="bg-green-500 px-2 py-1.5 rounded-lg inline-flex items-center gap-x-1 text-sm text-white focus:outline-hidden"
+                                        href="{{ route('teacher.viewAssignClass', ['id' => $teacher->id]) }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                        </svg>
+                                        Assign Classes
+                                    </a>
+                                </div>
                                 <div class="flex items-center justify-between">
                                     <div>
                                         <h2 class="text-xl font-bold text-gray-800">

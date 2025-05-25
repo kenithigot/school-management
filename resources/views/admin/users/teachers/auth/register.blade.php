@@ -133,9 +133,9 @@
                 <div class="sm:col-span-10">
                     <div class="sm:flex">
                         <div class="relative w-full">
-                            <x-input-floating class="{{ $errors->has('email') ? 'border-red-500' : '' }}"
-                                id="email" name="email" type="email" label="Email Address"
-                                placeholder="Email Address" value="{{ old('email') }}" />
+                            <x-input-floating class="{{ $errors->has('email') ? 'border-red-500' : '' }}" id="email"
+                                name="email" type="email" label="Email Address" placeholder="Email Address"
+                                value="{{ old('email') }}" />
                             @error('email')
                                 <span class="text-red-500 text-xs">{{ $message }}</span>
                             @enderror
@@ -243,10 +243,9 @@
 
                 <div class="sm:col-span-10">
                     <div class="w-full">
-                        <x-select id="department" name="department" placeholder="Select Department"
-                            :options="$departments->toArray()" :value="old('department')"
-                            class="{{ $errors->has('department') ? 'border-red-500' : '' }}"
-                            onchange="fetchDesignations(this.value)" />
+                        <x-select class="{{ $errors->has('department') ? 'border-red-500' : '' }}" id="department"
+                            name="department" placeholder="Select Department" :options="$departments->pluck('department_name')->toArray()"
+                            value="{{ old('department') }}" />
                         @error('department')
                             <span class="text-red-500 text-xs">{{ $message }}</span>
                         @enderror

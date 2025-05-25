@@ -68,7 +68,7 @@
                     </li>
 
                     <li class="hs-accordion" id="teachers-accordion">
-                        <x-side-bar-button :isActive="request()->routeIs('viewTeacher', 'teacher.register', 'viewTeacherDetails')">
+                        <x-side-bar-button :isActive="request()->routeIs('viewTeacher', 'teacher.*')">
                             <x-svg.users-icon />
                             Teachers
                             <svg class="hs-accordion-active:hidden ms-auto block size-4"
@@ -84,7 +84,9 @@
                             role="teachers" aria-labelledby="teachers-accordion">
                             <ul class="pt-1 ps-7 space-y-1">
                                 <li>
-                                    <x-side-bar-link href="{{ route('viewTeacher')}}"><x-svg.eye-icon />View Teachers</x-side-bar-link>
+                                    <x-side-bar-link href="{{ route('viewTeacher') }}" :isActive="request()->routeIs('viewTeacher', 'teacher.*')">
+                                        <x-svg.eye-icon />View Teachers
+                                    </x-side-bar-link>
                                 </li>
                                 <li>
                                     <x-side-bar-link href="{{ route('teacher.register') }}"><x-svg.add-user-icon />Add
@@ -134,7 +136,7 @@
                     </li>
 
                     <li class="hs-accordion" id="subjects-accordion">
-                        <x-side-bar-button>
+                        <x-side-bar-button :isActive="request()->routeIs('subject.*')">
                             <x-svg.book-icon />
                             Subjects
                             <svg class="hs-accordion-active:hidden ms-auto block size-4"
@@ -150,10 +152,13 @@
                             role="subjects" aria-labelledby="subjects-accordion">
                             <ul class="pt-1 ps-7 space-y-1">
                                 <li>
-                                    <x-side-bar-link><x-svg.list-icon />Manage Subjects</x-side-bar-link>
+                                    <x-side-bar-link
+                                        href="{{ route('subject.manageSubjectIndex') }}"><x-svg.list-icon />Manage
+                                        Subjects</x-side-bar-link>
                                 </li>
                                 <li>
-                                    <x-side-bar-link><x-svg.add-class-icon /> Add New Subject</x-side-bar-link>
+                                    <x-side-bar-link href="{{ route('subject.subjectIndex') }}"><x-svg.add-class-icon />
+                                        Add New Subject</x-side-bar-link>
                                 </li>
                             </ul>
                         </div>

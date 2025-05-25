@@ -8,4 +8,6 @@ Route::post('/admin/teacher-register', [TeacherController::class, 'store'])->nam
 Route::get('/admin/view-teacher', [TeacherController::class, 'viewTeacher'])->name('viewTeacher');
 
 Route::get('/get-designations/{department_id}', [TeacherController::class, 'getDesignations'])->name('fetch.designations');
-Route::get('/admin/view-teacher/teacher/{id}', [TeacherController::class, 'viewTeacherDetails'])->name('viewTeacherDetails');
+Route::get('/admin/view-teacher/teacher/{id}', [TeacherController::class, 'viewTeacherDetails'])->name('teacher.viewDetails');
+Route::get('/admin/view-teacher/teacher/{id}/assign-classes', [TeacherController::class, 'viewTeacherAssignClass'])->name('teacher.viewAssignClass');
+Route::get('/admin/get-subject-by-year', [TeacherController::class, 'getSubjectByYear'])->name('fetch.subjects');

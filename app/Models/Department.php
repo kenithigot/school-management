@@ -12,6 +12,11 @@ class Department extends Model
     {
         return $this->hasMany(Teacher::class);
     }
+
+    public function subjects()
+    {
+        return $this->hasMany(Subject::class);
+    }
     /** @use HasFactory<\Database\Factories\DepartmentFactory> */
     use HasFactory;
 }

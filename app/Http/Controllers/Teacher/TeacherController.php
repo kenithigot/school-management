@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Teacher;
 
 use App\Http\Controllers\Controller;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 use App\Models\Teacher;
 use App\Models\Department;
@@ -51,7 +52,7 @@ class TeacherController extends Controller
 
             // Login Info
             'username' => 'required|string|unique:users,username',
-            'password' => 'required|string|min:8|confirmed'       
+            'password' => 'required|string|min:8|confirmed'
 
         ]);
 
@@ -122,5 +123,33 @@ class TeacherController extends Controller
             'designation' => $teacher->course->course_name ?? 'N/A',
         ];
         return view('admin.users.teachers.auth.view-detail', compact('teacher', 'selectedTeacher'));
+    }
+
+    //Teacher Assign Class specification
+    public function viewTeacherAssignClass($id)
+    {
+
+        $teacher = Teacher::findOrFail($id);
+        $subjects = Subject::where('department_id', $teacher->department_id)->get();
+        return view('admin.users.teachers.auth.view-detail-assign-class', compact('teacher', 'subjects'));
+    }
+
+    //Display Subjects for teacher
+    public function displaySubjects()
+    {
+        $subjects = Subject::all();
+        return view('admin.users.teachers.auth.view-detail-assign-class', compact('subjects'));
+    }
+    // Assign Subject by Year
+    public function assignSubjectByYear(Request $request)
+    {
+        $yearLevels = $request->input('yearLevels', []);
+        $departmentId = $request->input('departmentId');
+
+        $subjects = Subject::whereIn('year_level', $yearLevels)
+            ->where('department_id', $departmentId)
+            ->get();
+
+        return response()->json($subjects);
     }
 }
