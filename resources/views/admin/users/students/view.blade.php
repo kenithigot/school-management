@@ -35,7 +35,7 @@
                     <div class="bg-slate-100 rounded-xl shadow-xs p-4 sm:p-7">
                         <div class="mb-8">
                             <h2 class="text-xl font-bold text-gray-800">
-                                View Account
+                                View Student Account
                             </h2>
                             <p class="text-sm text-gray-600">
                                 Provides detailed information about a student's profile, including academic records, attendance, personal details, and more.

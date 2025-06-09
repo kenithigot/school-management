@@ -7,6 +7,11 @@ use App\Models\Subject;
 use App\Models\Department;
 use Livewire\WithPagination;
 
+// Exports Libraries
+use App\Exports\SubjectExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class AddSubjectTable extends Component
 {
 
@@ -108,6 +113,68 @@ class AddSubjectTable extends Component
             'startingNumber' => $startingNumber,
             'departments' => $this->departments,
         ]);
+    }
+
+    public function exportExcel()
+    {
+        $query = Subject::with('department');
+
+        if ($this->selectedDepartment) {
+            $query->where('department_id', $this->selectedDepartment);
+        }
+
+        if ($this->selectedSemester) {
+            $query->where('semester', $this->selectedSemester);
+        }
+
+        if ($this->selectedYearLevel) {
+            $query->where('year_level', $this->selectedYearLevel);
+        }
+
+        if ($this->search) {
+            $query->where(function ($subQ) {
+                $columns = \Schema::getColumnListing('subjects');
+                foreach ($columns as $index => $column) {
+                    $subQ->{$index === 0 ? 'where' : 'orWhere'}($column, 'like', '%' . $this->search . '%');
+                }
+            });
+        }
+
+        return Excel::download(new SubjectExport($query), 'subjects.xlsx');
+    }
+
+    public function exportPdf()
+    {
+        $query = Subject::with('department');
+
+        if ($this->selectedDepartment) {
+            $query->where('department_id', $this->selectedDepartment);
+        }
+
+        if ($this->selectedSemester) {
+            $query->where('semester', $this->selectedSemester);
+        }
+
+        if ($this->selectedYearLevel) {
+            $query->where('year_level', $this->selectedYearLevel);
+        }
+
+        if ($this->search) {
+            $query->where(function ($subQ) {
+                $columns = \Schema::getColumnListing('subjects');
+                foreach ($columns as $index => $column) {
+                    $subQ->{$index === 0 ? 'where' : 'orWhere'}($column, 'like', '%' . $this->search . '%');
+                }
+            });
+        }
+
+        $subjects = $query->get();
+
+        $pdf = Pdf::loadView('exports.subjects-pdf', compact('subjects'))->setPaper('a4', 'landscape');
+        return response()->streamDownload(
+            fn() => print ($pdf->stream()),
+            'subjects.pdf'
+        );
     }
 
 }

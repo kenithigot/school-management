@@ -1,4 +1,4 @@
-@extends('admin.subject.layout-manage-subject')
+@extends('admin.subject.layout-edit-subject')
 @if (session('success'))
     <x-success-modal id="subject-confirm" hsOverlay="#subject-confirm">
         {{ session('success') }}
@@ -16,115 +16,66 @@
     </script>
 @endif
 
-@section('manage-subject')
-    <form action="{{ route('subject.register') }}" method="POST">
-        @csrf
-        <x-modal-add modalId="add-subject" modalTitle="Add Subject" dataOverlay="#add-subject"
-            modalLabel="subject-register-label" buttonName="Add Subject" type="submit">
-            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6 sm:px-2">
-                <div class="sm:col-span-3">
-                    <x-label label="Subject Name" />
-                </div>
-                <!-- End Col -->
-                <div class="sm:col-span-9">
-                    <div class="sm:flex">
-                        <div class="relative w-full">
-                            <x-input-floating class="{{ $errors->has('subjectName') ? 'border-red-500' : '' }}"
-                                name="subjectName" id="subjectName" label="Subject Name" placeholder="Subject Name"
-                                value="{{ old('subjectName') }}" />
-                            @error('subjectName')
-                                <span class="text-red-500 text-xs">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-                <!-- End Col -->
-
-                <div class="sm:col-span-3">
-                    <x-label label="Subject Code" />
-                </div>
-                <!-- End Col -->
-                <div class="sm:col-span-9">
-                    <div class="sm:flex">
-                        <div class="relative w-full">
-                            <x-input-floating class="{{ $errors->has('subjectCode') ? 'border-red-500' : '' }}"
-                                name="subjectCode" id="subjectCode" label="Subject Code" placeholder="Subject Code"
-                                value="{{ old('subjectCode') }}" />
-                            @error('subjectCode')
-                                <span class="text-red-500 text-xs">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-                <!-- End Col -->
-
-                <div class="sm:col-span-3">
-                    <x-label label="Description" />
-                </div>
-                <!-- End Col -->
-                <div class="sm:col-span-9">
-                    <div class="sm:flex">
-                        <div class="relative w-full">
-                            <x-text-area :rows="4" class="{{ $errors->has('description') ? 'border-red-500' : '' }}"
-                                name="description" id="description" placeholder="Type Description" />
-                            @error('description')
-                                <span class="text-red-500 text-xs">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-                <!-- End Col -->
-
-                <div class="sm:col-span-3">
-                    <x-label label="Subject Unit" />
-                </div>
-                <!-- End Col -->
-                <div class="sm:col-span-9">
-                    <div class="sm:flex">
-                        <div class="relative w-full">
-                            <x-input-floating type="number"
-                                class="{{ $errors->has('subjectUnit') ? 'border-red-500' : '' }}" name="subjectUnit"
-                                id="subjectUnit" label="Subject Unit" placeholder="Subject Unit"
-                                value="{{ old('subjectUnit') }}" />
-                            @error('subjectUnit')
-                                <span class="text-red-500 text-xs">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-                <!-- End Col -->
-
-                <div class="sm:col-span-3">
-                    <x-label label="Year Level" />
-                </div>
-                <!-- End Col -->
-                <div class="sm:col-span-9">
-                    <div class="w-full">
-                        <x-select class="{{ $errors->has('yearLevel') ? 'border-red-500' : '' }}" id="yearLevel"
-                            name="yearLevel" placeholder='Select Year Level' :options="[
-                                '1' => '1st year',
-                                '2' => '2nd year',
-                                '3' => '3rd year',
-                                '4' => '4th year',
-                                '5' => '5th year',
-                            ]"
-                            value="{{ old('yearLevel') }}" />
-                        @error('yearLevel')
+@section('edit-subject')
+    <div class="pt-4">
+        <form action="{{ route('subject.updateSubject', ['department' => $subject->department_id, 'id' => $subject->id]) }}"
+            method="POST">
+            @csrf
+            @method('PUT')
+            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
+                <div class="sm:col-span-6">
+                    <div class="relative w-full">
+                        <x-input-floating class="{{ $errors->has('subjectName') ? 'border-red-500' : '' }}" id="subjectName"
+                            name="subjectName" label="Subject Name" placeholder="Subject Name"
+                            value="{{ old('subjectName', $subject->subject_name) }}" />
+                        @error('subjectName')
                             <span class="text-red-500 text-xs">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
                 <!-- End Col -->
 
-                <div class="sm:col-span-3">
-                    <x-label label="Semester" />
+                <div class="sm:col-span-6">
+                    <div class="relative w-full">
+                        <x-input-floating class="{{ $errors->has('subjectCode') ? 'border-red-500' : '' }}" id="subjectCode"
+                            name="subjectCode" label="Subject Code" placeholder="Subject Code"
+                            value="{{ old('subjectCode', $subject->subject_code) }}" />
+                        @error('subjectCode')
+                            <span class="text-red-500 text-xs">{{ $message }}</span>
+                        @enderror
+                    </div>
                 </div>
                 <!-- End Col -->
-                <div class="sm:col-span-9">
+
+                <div class="sm:col-span-12">
+                    <div class="relative w-full">
+                        <x-input-floating class="{{ $errors->has('subjectDescription') ? 'border-red-500' : '' }}"
+                            id="subjectDescription" name="subjectDescription" label="Subject Description"
+                            placeholder="Subject Description"
+                            value="{{ old('subjectDescription', $subject->description) }}" />
+                        @error('subjectDescription')
+                            <span class="text-red-500 text-xs">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="sm:col-span-4">
+                    <div class="relative w-full">
+                        <x-input-floating type="number" class="{{ $errors->has('unit') ? 'border-red-500' : '' }}"
+                            id="unit" name="unit" label="Subject Unit" placeholder="Subject Unit"
+                            value="{{ old('unit', $subject->units) }}" />
+                        @error('unit')
+                            <span class="text-red-500 text-xs">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="sm:col-span-4">
                     <div class="w-full">
-                        <x-select class="{{ $errors->has('semester') ? 'border-red-500' : '' }}" id="semester"
-                            name="semester" placeholder='Select Semester' :options="['1' => '1st Semester', '2' => '2nd Semester', '3' => 'Summer']"
-                            value="{{ old('semester') }}" />
+                        <x-select id="semester" name="semester" placeholder="Select Semester" :options="[1 => '1st Semester', 2 => '2nd Semester', 3 => 'Summer']"
+                            :selected="old('semester', $subject->semester)" class="{{ $errors->has('semester') ? 'border-red-500' : '' }}" />
                         @error('semester')
                             <span class="text-red-500 text-xs">{{ $message }}</span>
                         @enderror
@@ -132,25 +83,25 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="sm:col-span-3">
-                    <x-label label="Department" />
-                </div>
-                <!-- End Col -->
-                {{-- <div class="sm:col-span-9">
+                <div class="sm:col-span-4">
                     <div class="w-full">
-                        <x-select class="{{ $errors->has('departments') ? 'border-red-500' : '' }}" id="department"
-                            name="department" placeholder='Select Department' :options="$departments->pluck('department_name', 'id')->toArray()"
-                            value="{{ old('department') }}" />
-                        @error('departments')
+                        <x-select id="yearLevel" name="yearLevel" placeholder="Select Year Level" :options="[1 => '1st Year', 2 => '2nd Year', 3 => '3rd Year', 4 => '4th Year']"
+                            :selected="old('yearLevel', $subject->year_level)" class="{{ $errors->has('yearLevel') ? 'border-red-500' : '' }}" />
+                        @error('yearLevel')
                             <span class="text-red-500 text-xs">{{ $message }}</span>
                         @enderror
                     </div>
-                </div> --}}
+                </div>
                 <!-- End Col -->
-            </div>
-            <!-- End Grid -->
-        </x-modal-add>
-    </form>
 
-    {{-- <livewire:add-subject-table /> --}}
+                <div class="sm:col-span-12">
+                    <div class="pt-8 flex justify-end gap-x-2">
+                        <x-button class="px-12" id="submitBtn" type="submit" aria-expanded="false"
+                            aria-controls="subject-confirm" data-hs-overlay="#subject-confirm" buttonLabel="Update Subject"
+                            loadLabel="Submitting" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 @endsection

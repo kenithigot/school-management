@@ -17,7 +17,7 @@ class TeacherController extends Controller
 {
     public function teacherAccount()
     {
-        $departments = Department::pluck('department_name', 'id');
+        $departments = Department::pluck('department_name', 'id')->toArray();
         return view('admin.users.teachers.auth.register', compact('departments'));
     }
 
@@ -26,7 +26,6 @@ class TeacherController extends Controller
         $designations = Course::where('department_id', $department_id)->get(['id', 'course_name']);
         return response()->json($designations);
     }
-
 
     public function store(Request $request)
     {

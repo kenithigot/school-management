@@ -15,3 +15,5 @@ Route::get('/admin', [Dashboard::class, 'dashboard'])->name('dashboard');
 require __DIR__.'/student.php';
 require __DIR__.'/teacher.php';
 require __DIR__.'/subject.php';
+require __DIR__.'/department.php';
+require __DIR__.'/assignment.php';

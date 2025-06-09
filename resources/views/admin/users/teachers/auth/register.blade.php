@@ -243,9 +243,8 @@
 
                 <div class="sm:col-span-10">
                     <div class="w-full">
-                        <x-select class="{{ $errors->has('department') ? 'border-red-500' : '' }}" id="department"
-                            name="department" placeholder="Select Department" :options="$departments->pluck('department_name')->toArray()"
-                            value="{{ old('department') }}" />
+                        <x-select id="department" name="department" placeholder="Select Department" :options="$departments"
+                            :value="old('department')" class="{{ $errors->has('department') ? 'border-red-500' : '' }}" />
                         @error('department')
                             <span class="text-red-500 text-xs">{{ $message }}</span>
                         @enderror

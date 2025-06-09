@@ -37,4 +37,9 @@ class Student extends Model
         ])->filter()->join(' ');
     }
 
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
+
 }

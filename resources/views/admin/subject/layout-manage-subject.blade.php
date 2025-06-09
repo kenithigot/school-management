@@ -24,7 +24,7 @@
                 <ol class="flex items-center whitespace-nowrap p-3 border-b border-slate-200">
                     <x-breadcrumb href="{{ route('dashboard') }}" label="Dashboard"><x-svg.home-icon /></x-breadcrumb>
                     <x-breadcrumb-before label="Subjects"><x-svg.users-icon /></x-breadcrumb-before>
-                    <x-breadcrumb-content label="Manage Subject" />
+                    <x-breadcrumb-content label="Department" />
                 </ol>
 
                 <x-content>
@@ -34,22 +34,13 @@
                         <div class="bg-slate-100 rounded-xl shadow-xs p-4 sm:p-7">
                             <div class="mb-8">
                                 <h2 class="text-xl font-bold text-gray-800">
-                                    Manage Subject
+                                    Manage Department Subject
                                 </h2>
                                 <p class="text-sm text-gray-600">
                                     Allows administrators to add, edit, or remove academic subjects, assign them to
                                     specific classes or grade levels, and link subjects with designated teachers.
                                 </p>
-                                {{-- <div class="pt-4">
-                                    <x-button-add class="text-white" ariaControl="add-subject"
-                                        dataOverlay="#add-subject">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                        </svg>Add Subject</x-button-add>
-                                </div> --}}
-
+                            
                                 <div class="pt-4">
                                     <h2 class="text-xl font-bold text-gray-800 mb-2">
                                         Department
