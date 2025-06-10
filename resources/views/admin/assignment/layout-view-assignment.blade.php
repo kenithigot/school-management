@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Assignment | School Management</title>
+    <title>View Assignment | School Management</title>
 
     <!-- Vite Laravel Assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -24,7 +24,7 @@
                 <ol class="flex items-center whitespace-nowrap p-3 border-b border-slate-200">
                     <x-breadcrumb href="{{ route('dashboard') }}" label="Dashboard"><x-svg.home-icon /></x-breadcrumb>
                     <x-breadcrumb-before label="Assignment"><x-svg.users-icon /></x-breadcrumb-before>
-                    <x-breadcrumb-content label="Add Assignment" />
+                    <x-breadcrumb-content label="View Assignment" />
                 </ol>
 
                 <x-content>
@@ -34,13 +34,13 @@
                         <div class="bg-slate-100 rounded-xl shadow-xs p-4 sm:p-7">
                             <div class="mb-8">
                                 <h2 class="text-xl font-bold text-gray-800 ">
-                                    Assignment
+                                    View Assignment
                                 </h2>
                                 <p class="text-sm text-gray-600">
                                     Manage academic departments, their courses, staff, and related programs to support
                                     student learning and school operations.
                                 </p>
-                                @yield('assignment-index')
+                                @yield('assignment-view')
                             </div>
                         </div>
                         <!-- End Card -->

@@ -212,7 +212,8 @@
                             role="assignments" aria-labelledby="assignments-accordion">
                             <ul class="pt-1 ps-7 space-y-1">
                                 <li>
-                                    <x-side-bar-link href="{{ route('subject.test') }}"><x-svg.eye-icon />View
+                                    <x-side-bar-link
+                                        href="{{ route('assignment.assignmentView') }}"><x-svg.eye-icon />View
                                         Assignments</x-side-bar-link>
                                 </li>
                                 <li>
