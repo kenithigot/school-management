@@ -31,4 +31,18 @@ class Assignment extends Model
     {
         return $this->belongsTo(Course::class);
     }
+
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
+
+    public function teacher() {
+        return $this->belongsTo(Teacher::class);
+    }
+
+    public function designatedTeacher()
+{
+    return $this->hasOne(Teacher::class, 'designation', 'subject_id');
+}
 }
