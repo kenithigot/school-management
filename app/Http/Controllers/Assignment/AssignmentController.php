@@ -59,8 +59,7 @@ class AssignmentController extends Controller
 
     public function assignmentView()
     {
-        $assignments = Assignment::with('department', 'course', 'subject', 'teacher')->paginate(9);
-        return view('admin.assignment.auth.view-assignment', compact('assignments'));
+        return view('admin.assignment.auth.view-assignment');
     }
 
     public function assignmentViewSpecific(Request $request, $id)
@@ -106,4 +105,17 @@ class AssignmentController extends Controller
 
         return redirect()->route('assignment.assignmentView')->with('success', 'Assignment updated successfully.');
     }
+    
+    public function assignmentDelete($id)
+    {
+        $assignment = Assignment::findOrFail($id);
+        $assignment->delete();
+
+        return redirect()->route('assignment.assignmentView')->with('success', 'Assignment deleted successfully.');
+    }
+
+    public function assignmentGrading() {
+        return view('admin.assignment.auth.grading');
+    }
+
 }

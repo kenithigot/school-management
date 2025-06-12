@@ -9,4 +9,8 @@ Route::get('/get-designations/{department_id}', [TeacherController::class, 'getD
 Route::post('/admin/assignment/add/', [AssignmentController::class, 'assignmentStore'])->name('assignment.assignmentStore');
 Route::get('/admin/assignment/view/', [AssignmentController::class, 'assignmentView'])->name('assignment.assignmentView');
 Route::get('/admin/assignment/view/assignment/{id}',[AssignmentController::class, 'assignmentViewSpecific'])->name('assignment.assignmentViewSpecific');
-Route::put('/admin/assignment/view/assignment/{id}/update',[AssignmentController::class, 'assignmentUpdate'])->name('assignment.assignmentUpdate');
+Route::put('/admin/assignment/view/assignment/{id}/update',action: [AssignmentController::class, 'assignmentUpdate'])->name(name: 'assignment.assignmentUpdate');
+Route::delete('/admin/assignment/view/assignment/{id}/delete',[AssignmentController::class, 'assignmentDelete'])->name('assignment.assignmentDelete');
+
+//Setting up a route for grading assignments
+Route::get('/admin/assignment/grading/', [AssignmentController::class, 'assignmentGrading'])->name('assignment.assignmentGrading');

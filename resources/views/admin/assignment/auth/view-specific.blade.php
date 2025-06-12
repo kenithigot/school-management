@@ -22,7 +22,7 @@
     <form action="{{ route('assignment.assignmentUpdate', ['id' => $assignment->id]) }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="grid sm:grid-cols-12 gap-2 sm:gap-6 sm:px-2 mt-8">
+        <div class="grid sm:grid-cols-12 gap-2 sm:gap-6 sm:px-2 sm:mt-8">
             <div class="sm:col-span-2">
                 <x-label label="Assignment Title" />
             </div>
@@ -111,8 +111,9 @@
             </div>
             <div class="sm:col-span-2">
                 <div class="w-full">
-                    <x-select class="{{ $errors->has('course') ? 'border-red-500' : '' }}" id="course" name="course" :options="$courses"
-                        placeholder='Select Course' value="{{ old('course', $assignment->course_id) }}" />
+                    <x-select class="{{ $errors->has('course') ? 'border-red-500' : '' }}" id="course" name="course"
+                        :options="$courses" placeholder='Select Course'
+                        value="{{ old('course', $assignment->course_id) }}" />
                     @error('course')
                         <span class="text-red-500 text-xs">{{ $message }}</span>
                     @enderror
@@ -125,7 +126,8 @@
             <div class="sm:col-span-2">
                 <div class="w-full">
                     <x-select class="{{ $errors->has('subject') ? 'border-red-500' : '' }}" id="subject" name="subject"
-                        placeholder='Select Subject' value="{{ old('subject', $assignment->subject_id) }}" :options="$subjects" />
+                        placeholder='Select Subject' value="{{ old('subject', $assignment->subject_id) }}"
+                        :options="$subjects" />
                     @error('subject')
                         <span class="text-red-500 text-xs">{{ $message }}</span>
                     @enderror
@@ -138,8 +140,8 @@
             <div class="sm:col-span-2">
                 <div class="w-full">
                     <x-select class="{{ $errors->has('yearLevel') ? 'border-red-500' : '' }}" id="yearLevel"
-                        name="yearLevel" placeholder='Select Year Level' value="{{ old('yearLevel', $assignment->year_level) }}"
-                        :options="['1' => '1st Year', '2' => '2nd Year', '3' => '3rd Year', '4' => '4th Year']" />
+                        name="yearLevel" placeholder='Select Year Level'
+                        value="{{ old('yearLevel', $assignment->year_level) }}" :options="['1' => '1st Year', '2' => '2nd Year', '3' => '3rd Year', '4' => '4th Year']" />
                     @error('yearLevel')
                         <span class="text-red-500 text-xs">{{ $message }}</span>
                     @enderror
@@ -173,8 +175,8 @@
             <div class="sm:col-span-2">
                 <div class="relative w-full">
                     <x-select class="{{ $errors->has('assignmentType') ? 'border-red-500' : '' }}" name="assignmentType"
-                        id="assignmentType" placeholder="Select Assignment Type" value="{{ old('assignmentType', $assignment->assignment_type) }}"
-                        :options="[
+                        id="assignmentType" placeholder="Select Assignment Type"
+                        value="{{ old('assignmentType', $assignment->assignment_type) }}" :options="[
                             'Homework' => 'Homework',
                             'Project' => 'Project',
                             'Quiz' => 'Quiz',
@@ -192,8 +194,8 @@
             <div class="sm:col-span-2">
                 <div class="relative w-full">
                     <x-select class="{{ $errors->has('submissionMode') ? 'border-red-500' : '' }}" name="submissionMode"
-                        id="submissionMode" placeholder="Select Submission Mode" value="{{ old('submissionMode', $assignment->submission_mode) }}"
-                        :options="[
+                        id="submissionMode" placeholder="Select Submission Mode"
+                        value="{{ old('submissionMode', $assignment->submission_mode) }}" :options="[
                             'Online Upload' => 'Online Upload',
                             'In-person Submission' => 'In-person Submission',
                             'Email' => 'Email',
@@ -219,8 +221,9 @@
             </div>
         </div>
         <div class="pt-8 flex justify-end gap-x-2">
+            <x-button-back href="{{ route('assignment.assignmentView') }}">Back</x-button-back>
             <x-button id="submitBtn" type="submit" aria-expanded="false" aria-controls="modal-confirm"
-                data-hs-overlay="#modal-confirm" buttonLabel="Update" loadLabel="Submitting" />
+                data-hs-overlay="#modal-confirm" buttonLabel="Update" loadLabel="Updating" />
         </div>
     </form>
 @endsection

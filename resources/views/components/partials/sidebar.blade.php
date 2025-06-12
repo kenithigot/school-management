@@ -222,7 +222,7 @@
                                         Assignment</x-side-bar-link>
                                 </li>
                                 <li>
-                                    <x-side-bar-link><x-svg.check-circle />Grade Assignments</x-side-bar-link>
+                                    <x-side-bar-link href="{{route('assignment.assignmentGrading')}}"><x-svg.check-circle />Grade Assignments</x-side-bar-link>
                                 </li>
                             </ul>
                         </div>

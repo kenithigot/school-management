@@ -9,7 +9,7 @@
 
     <!-- Vite Laravel Assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    @livewireStyles
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -67,6 +67,7 @@
         </x-partials.top-bar>
     </div>
     <x-partials.footer />
+    @livewireScripts
 </body>
 
 </html>

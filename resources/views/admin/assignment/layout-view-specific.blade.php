@@ -24,7 +24,7 @@
                 <ol class="flex items-center whitespace-nowrap p-3 border-b border-slate-200">
                     <x-breadcrumb href="{{ route('dashboard') }}" label="Dashboard"><x-svg.home-icon /></x-breadcrumb>
                     <x-breadcrumb-before label="Assignment"><x-svg.users-icon /></x-breadcrumb-before>
-                    <x-breadcrumb-content label="Add Assignment" />
+                    <x-breadcrumb-content label="View Assignment" />
                 </ol>
 
                 <x-content>
@@ -32,23 +32,37 @@
                     <div class="py-2 sm:py-6 lg:px-6 mx-auto">
                         <!-- Card -->
                         <div class="bg-slate-100 rounded-xl shadow-xs p-4 sm:p-7">
-                            <a class="inline-flex items-center gap-x-1 text-sm text-gray-800 hover:text-green-600 focus:outline-hidden focus:text-green-600"
-                                href="{{ route('assignment.assignmentView') }}">
-                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m15 18-6-6 6-6" />
-                                </svg>
-                                Back to home
-                            </a>
                             <div class="mb-8">
-                                <h2 class="text-xl font-bold text-gray-800 ">
-                                    Assignment
-                                </h2>
-                                <p class="text-sm text-gray-600">
-                                    Manage academic departments, their courses, staff, and related programs to support
-                                    student learning and school operations.
-                                </p>
+                                <div class="sm:flex items-center">
+                                    <div class="flex-1">
+                                        <h2 class="text-xl font-bold text-gray-800 ">
+                                            Assignment
+                                        </h2>
+                                        <p class="text-sm text-gray-600">
+                                            Manage academic departments, their courses, staff, and related programs to
+                                            support
+                                            student learning and school operations.
+                                        </p>
+                                    </div>
+                                    <div class="">
+                                        <form
+                                            action="{{ route('assignment.assignmentDelete', ['id' => $assignment->id]) }}"
+                                            method="POST"
+                                            onsubmit="return confirm('Are you sure you want to delete this assignment?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <x-button-delete type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24" fill="currentColor" class="size-8 text-red-500">
+                                                    <path
+                                                        d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.133 2.845a.75.75 0 0 1 1.06 0l1.72 1.72 1.72-1.72a.75.75 0 1 1 1.06 1.06l-1.72 1.72 1.72 1.72a.75.75 0 1 1-1.06 1.06L12 15.685l-1.72 1.72a.75.75 0 1 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Z"
+                                                        clip-rule="evenodd" />
+                                                </svg><span class="underline text-base text-red-500">Delete</span>
+                                            </x-button-delete>
+                                        </form>
+                                    </div>
+                                </div>
                                 @yield('assignment-viewSpecific')
                             </div>
                         </div>
